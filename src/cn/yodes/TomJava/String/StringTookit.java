@@ -1,15 +1,21 @@
 package cn.yodes.TomJava.String;
 
+import java.util.regex.Pattern;
 
 /**
  * @author Yodes.cn
  * String tookit for JAVA developer.
  */
 
+/**
+ * @author Yodes
+ *
+ */
 public class StringTookit {
 	
 	
 	/**
+	 * judge a string does not contains  many substing.(means ||)
 	 * @param s 
 	 * @param args
 	 * @return boolean
@@ -26,7 +32,7 @@ public class StringTookit {
 
 	
 	/**
-	 * @
+	 * judge a string does not equals many substring.(means &&)
 	 * @param name
 	 * @param args
 	 * @return boolean
@@ -39,4 +45,28 @@ public class StringTookit {
 		}
 		return false;
 	}
+	
+	
+	/**
+	 * judge a string is not a legal double data.
+	 * @param str
+	 * @return boolean
+	 */
+	public static boolean isDouble(String str) {
+
+	    Pattern pattern = Pattern.compile("^[-\\+]?\\d+(\\.\\d*)?|\\.\\d+$");
+
+	    return pattern.matcher(str).matches();
+
+	}
+	
+	/**
+	 * judge a string is not a legal int data.
+	 * @param str
+	 * @return
+	 */
+	public static boolean isNumeric(String str){  
+	    Pattern pattern = Pattern.compile("[0-9]*");  
+	    return pattern.matcher(str).matches();     
+	}  
 }
