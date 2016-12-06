@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
  * @author Yodes
  *
  */
-public class StringTookit {
+public class Y_String {
 	
 	
 	/**

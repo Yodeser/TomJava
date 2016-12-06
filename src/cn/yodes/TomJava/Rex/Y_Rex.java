@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  *  description
  */
 
-public class StringRex {
+public class Y_Rex {
 
 	static Pattern pattern = Pattern.compile("^[-\\+]?\\d+(\\.\\d*)?|\\.\\d+$");
 }
