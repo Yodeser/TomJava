@@ -1,4 +1,4 @@
-package cn.yodes.TomJava.map;
+package cn.yodes.TomJava.Map;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,7 @@ import java.util.Map.Entry;
  *  Copyright  2016  Yodes.cn
  *  All       right      reserved.
  *  @author Yodes E-mail:yodeser@gmail.com
- *  @version Create on 2016年12月7日 上午12:29:17
+ *  @version Create on 2016�?12�?7�? 上午12:29:17
  *  description
  */
 
@@ -75,7 +75,7 @@ public class Y_Map {
 		return null;
 	}
 	
-    //根据value值获取到对应的一个key值
+    //根据value值获取到对应的一个key�?
     public static String getKey(HashMap<String,String> map,String value){
         String key = null;
         //Map,HashMap并没有实现Iteratable接口.不能用于增强for循环.
@@ -88,7 +88,7 @@ public class Y_Map {
         //这个key肯定是最后一个满足该条件的key.
     }
     
-    //根据value值获取到对应的所有的key值
+    //根据value值获取到对应的所有的key�?
     public static List<String> getKeyList(HashMap<String,String> map,String value){
         List<String> keyList = new ArrayList<String>();
         for(String getKey: map.keySet()){
