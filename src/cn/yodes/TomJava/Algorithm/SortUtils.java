@@ -27,6 +27,11 @@ public class SortUtils {
 		return data;
 	}
 	
+	public int[] QuickSort(int[] data){
+		
+		return data;
+	}
+	
 	public static void main(String[] args) {
 		int[] testCase = new int[10];
 		for(int i=0 ; i<testCase.length ; i++){
@@ -40,3 +45,12 @@ public class SortUtils {
 			System.out.print(i+"\t");
 	}
 }
+
+
+/**
+ * 26	70	26	21	8	95	36	4	12	38	
+ * 
+ * 
+ */
+
+
