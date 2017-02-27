@@ -27,6 +27,7 @@ public class SortUtils {
 		return data;
 	}
 	
+	
 	public int partition(int []array,int lo,int hi){
         //固定的切分方式
         int key=array[lo];
