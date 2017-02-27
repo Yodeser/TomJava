@@ -8,7 +8,7 @@ public class SortUtils {
 					data[j+1] = data[j] - data[j+1];
 					data[j]   = data[j] - data[j+1];
 					data[j+1] = data[j] + data[j+1];
-				}
+				}	
 			}
 		}
 		return data;
@@ -27,10 +27,31 @@ public class SortUtils {
 		return data;
 	}
 	
-	public int[] QuickSort(int[] data){
-		
-		return data;
-	}
+	public int partition(int []array,int lo,int hi){
+        //固定的切分方式
+        int key=array[lo];
+        while(lo<hi){
+            while(array[hi]>=key&&hi>lo){//从后半部分向前扫描
+                hi--;
+            }
+            array[lo]=array[hi];
+            while(array[lo]<=key&&hi>lo){//从前半部分向后扫描
+                lo++;
+            }
+            array[hi]=array[lo];
+        }
+        array[hi]=key;
+        return hi;
+    }
+    
+    public void QuickSort(int[] array,int lo ,int hi){
+        if(lo>=hi){
+            return ;
+        }
+        int index=partition(array,lo,hi);
+        QuickSort(array,lo,index-1);
+        QuickSort(array,index+1,hi); 
+    }
 	
 	public static void main(String[] args) {
 		int[] testCase = new int[10];
@@ -40,7 +61,7 @@ public class SortUtils {
 		for(int i:testCase)
 			System.out.print(i+"\t");
 		System.out.println("\n\n");
-		new SortUtils().SelectionSort(testCase);
+		new SortUtils().QuickSort(testCase , 0 , testCase.length - 1);
 		for(int i:testCase)
 			System.out.print(i+"\t");
 	}
