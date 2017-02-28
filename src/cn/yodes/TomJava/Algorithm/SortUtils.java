@@ -54,6 +54,47 @@ public class SortUtils {
         QuickSort(array,index+1,hi); 
     }
 	
+    public void MergeArray(int []array , int left , int mid , int right , int []temp){
+    	int i = left , j = mid + 1;
+    	int m = mid  , r = right;
+    	int k = 0;
+    	
+    	while(i <= m && j <= r){
+    		if(array[i] <= array[j]){
+    			temp[k++] = array[i++];
+    		}else{
+    			temp[k++] = array[j++];
+    		}
+    	}
+    	
+    		while(i < m)
+    			temp[k++] = array[i++];
+    		
+    		while(j < r)
+    			temp[k++] = array[j++];
+    		
+    		
+    		for(i = 0 ; i < k ; i++) {
+    			array[left + i] = temp[i];
+    		}
+    }
+    
+    public void DivideMerge(int []data , int left , int right , int []temp){
+    	
+    	
+    	if(left < right){
+    		int mid = (left + right)/2;
+    		DivideMerge(data , left  , mid , temp);
+    		DivideMerge(data , mid+1 , right , temp);
+    		MergeArray(data , left , mid , right , temp);
+    	}
+    }
+    
+    public void MergeSort(int []data){
+    	int []temp = new int[data.length];
+    	DivideMerge(data , 0 , data.length - 1 , temp);
+    }
+    
 	public static void main(String[] args) {
 		int[] testCase = new int[10];
 		for(int i=0 ; i<testCase.length ; i++){
@@ -62,7 +103,7 @@ public class SortUtils {
 		for(int i:testCase)
 			System.out.print(i+"\t");
 		System.out.println("\n\n");
-		new SortUtils().QuickSort(testCase , 0 , testCase.length - 1);
+		new SortUtils().MergeSort(testCase);
 		for(int i:testCase)
 			System.out.print(i+"\t");
 	}
