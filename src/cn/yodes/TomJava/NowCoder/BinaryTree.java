@@ -13,7 +13,7 @@ public class BinaryTree {
         TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
         return root;
     }
-    //前序遍历{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}
+  //鍓嶅簭閬嶅巻{1,2,4,7,3,5,6,8}鍜屼腑搴忛亶鍘嗗簭鍒梴4,7,2,1,5,3,8,6}
     private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) {
          
         if(startPre>endPre||startIn>endIn)

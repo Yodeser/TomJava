@@ -17,8 +17,6 @@ public class FirstSolution {
 		}
 	}
 	
-	
-	
 	public Object printLast_NoK(LinkNode linknode , int k){
 		if(flag++ != linknode.getLenth() - k){
 			printLast_NoK(linknode.next , k);
