@@ -29,14 +29,14 @@ public class SortUtils {
 	
 	
 	public int partition(int []array,int lo,int hi){
-        //¹Ì¶¨µÄÇÐ·Ö·½Ê½
+        //ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½Ð·Ö·ï¿½Ê½
         int key=array[lo];
         while(lo<hi){
-            while(array[hi]>=key&&hi>lo){//´Óºó°ë²¿·ÖÏòÇ°É¨Ãè
+            while(array[hi]>=key&&hi>lo){//ï¿½Óºï¿½ë²¿ï¿½ï¿½ï¿½ï¿½Ç°É¨ï¿½ï¿½
                 hi--;
             }
             array[lo]=array[hi];
-            while(array[lo]<=key&&hi>lo){//´ÓÇ°°ë²¿·ÖÏòºóÉ¨Ãè
+            while(array[lo]<=key&&hi>lo){//ï¿½ï¿½Ç°ï¿½ë²¿ï¿½ï¿½ï¿½ï¿½ï¿½É¨ï¿½ï¿½
                 lo++;
             }
             array[hi]=array[lo];
@@ -80,8 +80,6 @@ public class SortUtils {
     }
     
     public void DivideMerge(int []data , int left , int right , int []temp){
-    	
-    	
     	if(left < right){
     		int mid = (left + right)/2;
     		DivideMerge(data , left  , mid , temp);
