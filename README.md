@@ -4,3 +4,5 @@
  
  A Long-term update efferective java tool package ,  covering a wide range.
  Welcome to your **pull** requests.
+
+欢迎来踩一踩我的[个人博客](http://blog.yodes.cn)
